@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(255, 255, 255, 0.1); /* Default transparent/light background */
+    width: 100%;
+    z-index: 1000;
+    position: relative; 
+}
+
+.nav-logo { 
+    height: 45px; 
+    cursor: pointer;
+}
+
+.nav-list { 
+    display: flex; 
+    list-style: none; 
+    gap: 2rem; 
+    margin-left: 3rem; 
+    align-items: center;
+}
+
+.nav-item {
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+}
+
+.nav-item.active { 
+    border-bottom: 2px solid #000000; 
+    font-weight: 700 !important; 
+}

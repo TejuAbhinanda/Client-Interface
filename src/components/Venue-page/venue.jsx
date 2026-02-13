@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
+
 import './venue.css';
 
 const VenuesPage = () => {
@@ -39,35 +39,13 @@ const VenuesPage = () => {
         ]
     };
 
-    const navItems = [
-        'Logo',
-        'Portfolio',
-        'Booking',
-        'Timeline',
-        'Venues',
-        'Decor',
-        'Our Works'
-    ];
+
 
     return (
         <div className="venue-page">
 
             {/* Navbar */}
-            <nav className="navbar">
-                <ul className="nav-list">
-                    {navItems.map((item, index) => (
-                        <li
-                            key={index}
-                            className={`nav-item ${item === 'Logo' ? 'logo' : ''} ${item === 'Venues' ? 'active' : ''}`}
-                        >
-                            {item === 'Logo'
-                                ? <img src={logo} alt="Logo" className="nav-logo" />
-                                : item
-                            }
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+
 
             {/* Main Content */}
             <div className="main-content">

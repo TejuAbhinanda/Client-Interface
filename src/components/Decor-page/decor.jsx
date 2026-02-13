@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
-import bgImage from '../../assets/background.jpg'; 
+
+import bgImage from '../../assets/background.jpg';
 import './decor.css';
 import h1 from "../../assets/haldi/haldi1.jpg";
 import h2 from "../../assets/haldi/haldi2.jpg";
@@ -33,20 +33,11 @@ const DecorPage = () => {
     };
 
     const categories = ['Haldi', 'Sangeeth', 'Wedding', 'Reception'];
-    const navItems = ['Portfolio', 'Booking', 'Timeline', 'Venues', 'Decor', 'Our Works'];
+
 
     return (
         <div className="decor-page" style={{ backgroundImage: `url(${bgImage})` }}>
-            <nav className="navbar">
-                <img src={logo} alt="Logo" className="nav-logo" />
-                <ul className="nav-list">
-                    {navItems.map((item) => (
-                        <li key={item} className={item === 'Decor' ? 'active-nav' : ''}>
-                            {item}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+
 
             <div className="desktop-container">
                 <header className="page-header">
