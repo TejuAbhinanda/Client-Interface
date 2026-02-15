@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 
 // Components
@@ -11,6 +11,9 @@ import Venues from "./components/Venue-page/venue";
 import OurWorks from "./components/OurWork-page/ourwork";
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
     <>
       <Navbar />

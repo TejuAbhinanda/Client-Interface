@@ -1,40 +1,85 @@
+/* ================= NAVBAR COMMON ================= */
 .navbar {
     display: flex;
     align-items: center;
-    padding: 1.5rem 5%;
-    background: rgba(255, 255, 255, 0.1); /* Default transparent/light background */
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1000;
-    position: relative; 
+    z-index: 999;
+
+    padding: 15px 0 15px 0;
+    /* clean padding */
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
 }
 
-.nav-logo { 
-    height: 45px; 
-    cursor: pointer;
+
+/* ================= HOME PAGE NAVBAR ================= */
+.navbar.home {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
 }
 
-.nav-list { 
-    display: flex; 
-    list-style: none; 
-    gap: 2rem; 
-    margin-left: 3rem; 
+.navbar.home .nav-item {
+    color: #ffffff;
+}
+
+
+/* ================= DEFAULT PAGE NAVBAR ================= */
+.navbar.default {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar.default .nav-item {
+    color: #333333;
+}
+
+
+/* ================= LOGO ================= */
+.logo {
+    height: 60px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+
+/* ================= NAV LINKS ================= */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
     align-items: center;
+    margin: 0 auto;
+    /* keeps menu centered nicely */
+    padding: 0;
 }
 
+
+/* ================= TEXT STYLE ================= */
 .nav-item {
-    color: #000000;
     font-weight: 500;
     cursor: pointer;
-    transition: 0.3s;
-    text-decoration: none;
     font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .nav-item:hover {
-    opacity: 0.7;
+    color: #d4af37 !important;
 }
 
-.nav-item.active { 
-    border-bottom: 2px solid #000000; 
-    font-weight: 700 !important; 
+
+/* ================= ACTIVE PAGE ================= */
+.nav-item.active {
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 4px;
+    color: #d4af37 !important;
 }

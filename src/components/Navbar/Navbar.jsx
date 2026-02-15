@@ -1,9 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+    const navbarClass = isHomePage ? 'navbar home' : 'navbar default';
+
     const navItems = [
         { name: 'Portfolio', path: '/portfolio' },
         { name: 'Booking', path: '/booking' },
@@ -14,9 +18,9 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="navbar">
+        <nav className={navbarClass}>
             <NavLink to="/">
-                <img src={logo} alt="Logo" className="nav-logo" />
+                <img src={logo} alt="logo" className="logo" />
             </NavLink>
             <ul className="nav-list">
                 {navItems.map((item) => (
