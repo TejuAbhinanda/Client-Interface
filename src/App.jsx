@@ -4,7 +4,6 @@ import './App.css';
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home-page/home";
-import Decor from "./components/Decor-page/decor";
 import Booking from "./components/Booking-page/book";
 import Portfolio from "./components/Portfolio-page/portfolio";
 import Timeline from "./components/TimeLine-page/timeline";
@@ -17,7 +16,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/decor" element={<Decor />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/timeline" element={<Timeline />} />
