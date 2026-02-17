@@ -7,7 +7,7 @@
 
 /* HERO */
 .venue-detail-hero{
-    background:#cfa77a;
+    background:#d6904e;
     padding:80px 20px;
     text-align:center;
     color:white;
@@ -35,7 +35,7 @@
 }
 
 .check-btn:hover{
-    background:#cfa77a;
+    background:#B87333;
     color:white;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .venue-about h2{
-    color:#cfa77a;
+    color:#d39d5f;
     font-size:28px;
 }
 

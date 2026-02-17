@@ -10,6 +10,7 @@ import Timeline from "./components/TimeLine-page/timeline";
 import Venues from "./components/Venue-page/venue";
 import VenueDetail from "./components/Venue-page/VenueDetail";
 import OurWorks from "./components/OurWork-page/ourwork";
+import ChatBot from "./components/Chat-Bot/chatbot";
 
 function App() {
   const location = useLocation();
@@ -17,7 +18,9 @@ function App() {
 
   return (
     <>
-      <Navbar />
+       <Navbar />
+       <ChatBot />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
@@ -25,7 +28,7 @@ function App() {
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/venues" element={<Venues />} />
         <Route path="/venue/:name" element={<VenueDetail />} />
-        <Route path="/our-works" element={<OurWorks />} />
+        <Route path="/our-works" element={<OurWorks />} />S
       </Routes>
     </>
   )

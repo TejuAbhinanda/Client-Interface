@@ -6,7 +6,7 @@
 
 /* HERO */
 .venue-hero{
-    background:#cda77b;
+    background:#d6904e;
     padding:60px 20px;
     text-align:center;
     color:white;
@@ -30,7 +30,7 @@
 
 .venue-title h2{
     font-size:32px;
-    color:#cda77b;
+    color:#d39d5f;
 }
 
 .venue-title p{
@@ -56,7 +56,7 @@
 }
 
 .venue-locations button:hover{
-    background:#cda77b;
+    background:#B87333;
     color:white;
 }
 
