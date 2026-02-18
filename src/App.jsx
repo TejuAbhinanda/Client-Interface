@@ -28,7 +28,7 @@ function App() {
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/venues" element={<Venues />} />
         <Route path="/venue/:name" element={<VenueDetail />} />
-        <Route path="/our-works" element={<OurWorks />} />S
+        <Route path="/our-works" element={<OurWorks />} />
       </Routes>
     </>
   )
