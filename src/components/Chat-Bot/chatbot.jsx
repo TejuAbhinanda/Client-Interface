@@ -46,7 +46,7 @@ const ChatBot = () => {
     <>
       {/* ICON */}
       <div className="chat-icon" onClick={() => setOpen(!open)}>
-        💬
+        🤖
       </div>
 
       {/* CHAT WINDOW */}

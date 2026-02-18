@@ -7,7 +7,7 @@
 
 /* HERO */
 .venue-detail-hero{
-    background:#d6904e;
+    background:#eb7834;
     padding:80px 20px;
     text-align:center;
     color:white;
@@ -35,7 +35,7 @@
 }
 
 .check-btn:hover{
-    background:#B87333;
+    background:#eb7834;
     color:white;
 }
 
