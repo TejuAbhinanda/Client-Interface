@@ -18,7 +18,7 @@ const venueInfo = {
     price: "1,50,000",
     capacity: "500 Guests",
     food: "Veg & Non-Veg",
-    images: [v1, v2, v3, v4]
+    images: [v1, v2, v3, v4 ]                                                                                                                                                                                                                             
   },
   "Garden Hall": {
     city: "Bangalore",
@@ -163,7 +163,7 @@ const venueInfo = {
 
       {/* GALLERY */}
       <div className="venue-gallery">
-        <h2>Image Gallery</h2>
+        <h2>Venue Image </h2>
         <div className="gallery-grid">
           {venue.images.map((img, i) => (
             <img key={i} src={img} alt="venue" />
@@ -173,7 +173,7 @@ const venueInfo = {
 
       {/* LOCATION */}
       <div className="venue-location">
-        <h2>Location of the Venue</h2>
+        <h2>Location of the Venue 📍</h2>
         <p>{venue.city}</p>
       </div>
 
