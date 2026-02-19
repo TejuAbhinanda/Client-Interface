@@ -1,3 +1,7 @@
+/* IMPORT LUXURY FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+
 /* FLOAT ICON */
 .chat-icon{
     position:fixed;
@@ -11,6 +15,7 @@
     cursor:pointer;
     z-index:9999;
     box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    font-family: 'Playfair Display', serif;
 }
 
 /* GLASS CHAT BOX */
@@ -29,11 +34,12 @@
     overflow:hidden;
     z-index:9999;
     border:1px solid rgba(255,255,255,0.3);
+    font-family: 'Playfair Display', serif;
 }
 
 /* HEADER */
 .chatbot-header{
-  background:#cfa77a;
+  background:#eb7834;
   color:white;
   padding:14px 18px;
   display:flex;
@@ -41,6 +47,7 @@
   justify-content:space-between;
   border-top-left-radius:20px;
   border-top-right-radius:20px;
+  font-family: 'Playfair Display', serif;   
 }
 
 /* title */
@@ -76,7 +83,7 @@
 
 /* USER MESSAGE */
 .user-msg{
-    background:#B87333;
+    background:#eb7834;
     color:white;
     padding:10px 14px;
     border-radius:14px;
@@ -101,7 +108,7 @@
 }
 
 .chat-input button{
-    background:#B87333;
+    background:#eb7834;
     border:none;
     color:white;
     padding:12px 16px;

@@ -6,6 +6,11 @@ import v1 from "../../assets/wedding-hero-1.jpg";
 import v2 from "../../assets/wedding-hero-2.jpg";
 import v3 from "../../assets/wedding-hero-3.jpg";
 import v4 from "../../assets/wedding-hero-4.jpg";
+import v5 from "../../assets/wedding-hero-5.jpg";
+import v6 from "../../assets/wedding-hero-6.jpg";
+import v7 from "../../assets/wedding-hero-7.jpg";
+import v8 from "../../assets/wedding-hero-8.jpg";
+
 
 const Venue = () => {
 
@@ -15,24 +20,41 @@ const Venue = () => {
       { name: "Garden Hall", img: v2 },
       { name: "Grand Resort", img: v3 },
       { name: "Elite Banquet", img: v4 },
+      { name: "luxury Banquet", img: v5 },
+      { name: "Resort Banquet", img: v6 },
+      { name: "Royal hall", img: v7 },
+      { name: "Grand Banquet", img: v8 }
     ],
     Goa: [
       { name: "Beach Resort", img: v2 },
       { name: "Sea Palace", img: v3 },
       { name: "Sunset Hall", img: v1 },
       { name: "Ocean View", img: v4 },
+      { name: "luxury Banquet", img: v5 },
+      { name: "Resort Banquet", img: v6 },
+      { name: "Royal hall", img: v7 },
+      { name: "Grand Banquet", img: v8 }
     ],
     Mangalore: [
-      { name: "Coastal Hall", img: v3 },
-      { name: "Temple Garden", img: v1 },
-      { name: "Palm Resort", img: v2 },
-      { name: "Lotus Venue", img: v4 },
+     { name: "Royal Palace", img: v1 },
+      { name: "Garden Hall", img: v2 },
+      { name: "Grand Resort", img: v3 },
+      { name: "Elite Banquet", img: v4 },
+      { name: "luxury Banquet", img: v5 },
+      { name: "Resort Banquet", img: v6 },
+      { name: "Royal hall", img: v7 },
+      { name: "Grand Banquet", img: v8 }
     ],
+
     Shivamogga: [
-      { name: "Green Valley", img: v1 },
-      { name: "Forest Resort", img: v2 },
-      { name: "River Hall", img: v3 },
-      { name: "Nature Palace", img: v4 },
+      { name: "Beach Resort", img: v2 },
+      { name: "Sea Palace", img: v3 },
+      { name: "Sunset Hall", img: v1 },
+      { name: "Ocean View", img: v4 },
+      { name: "luxury Banquet", img: v5 },
+      { name: "Resort Banquet", img: v6 },
+      { name: "Royal hall", img: v7 },
+      { name: "Grand Banquet", img: v8 }
     ],
   };
 
@@ -41,18 +63,18 @@ const Venue = () => {
   return (
     <div className="venue-page">
 
+       {/* TITLE */}
+      <div className="venue-title">
+        <h2>Venues</h2>
+      </div>
+
       {/* HERO */}
       <div className="venue-hero">
         <h1>FIND YOUR DREAM WEDDING VENUE</h1>
         <p>Explore the finest wedding venue tailored to your desires</p>
       </div>
 
-      {/* TITLE */}
-      <div className="venue-title">
-        <h2>Venues</h2>
-        <p>Available wedding venue by location</p>
-      </div>
-
+   
       {/* LOCATION BUTTONS */}
       <div className="venue-locations">
         {Object.keys(venuesData).map((city) => (

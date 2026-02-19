@@ -4,7 +4,7 @@ import "./chatbot.css";
 const ChatBot = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hi 👋 Welcome to Vivahasya Weddings!" }
+    { from: "bot", text: "Hi 👋🏻 Welcome to Vivahasya Weddings!" }
   ]);
   const [input, setInput] = useState("");
 
@@ -13,7 +13,7 @@ const ChatBot = () => {
     setTimeout(() => {
       setOpen(true);
       setMessages([
-        { from: "bot", text: "Hi 👋 Need help with booking or venues?" }
+        { from: "bot", text: "Hi 👋🏻 Need help with booking or venues?" }
       ]);
     }, 5000);
   }, []);
@@ -53,7 +53,7 @@ const ChatBot = () => {
       {open && (
         <div className="chat-box">
          <div className="chatbot-header">
-             Vivahasya Assistant ✨
+             Vivahasya Assistant 
 
         {/* ❌ CLOSE BUTTON */}
              <span className="close-btn" onClick={() => setOpen(false)}>✖</span>
