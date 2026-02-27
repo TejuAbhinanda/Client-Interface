@@ -11,7 +11,6 @@ import v6 from "../../assets/wedding-hero-6.jpg";
 import v7 from "../../assets/wedding-hero-7.jpg";
 import v8 from "../../assets/wedding-hero-8.jpg";
 
-
 const Venue = () => {
 
   const venuesData = {
@@ -20,9 +19,9 @@ const Venue = () => {
       { name: "Garden Hall", img: v2 },
       { name: "Grand Resort", img: v3 },
       { name: "Elite Banquet", img: v4 },
-      { name: "luxury Banquet", img: v5 },
+      { name: "Luxury Banquet", img: v5 },
       { name: "Resort Banquet", img: v6 },
-      { name: "Royal hall", img: v7 },
+      { name: "Royal Hall", img: v7 },
       { name: "Grand Banquet", img: v8 }
     ],
     Goa: [
@@ -30,52 +29,42 @@ const Venue = () => {
       { name: "Sea Palace", img: v3 },
       { name: "Sunset Hall", img: v1 },
       { name: "Ocean View", img: v4 },
-      { name: "luxury Banquet", img: v5 },
+      { name: "Luxury Banquet", img: v5 },
       { name: "Resort Banquet", img: v6 },
-      { name: "Royal hall", img: v7 },
+      { name: "Royal Hall", img: v7 },
       { name: "Grand Banquet", img: v8 }
     ],
-    Mangalore: [
-     { name: "Royal Palace", img: v1 },
-      { name: "Garden Hall", img: v2 },
-      { name: "Grand Resort", img: v3 },
-      { name: "Elite Banquet", img: v4 },
-      { name: "luxury Banquet", img: v5 },
-      { name: "Resort Banquet", img: v6 },
-      { name: "Royal hall", img: v7 },
-      { name: "Grand Banquet", img: v8 }
-    ],
+Mangalore: [
+  { name: "Coastal Hall", img: v1 },
+  { name: "Temple Garden", img: v2 },
+  { name: "Palm Resort", img: v3 },
+  { name: "Lotus Venue", img: v4 }
+],
 
-    Shivamogga: [
-      { name: "Beach Resort", img: v2 },
-      { name: "Sea Palace", img: v3 },
-      { name: "Sunset Hall", img: v1 },
-      { name: "Ocean View", img: v4 },
-      { name: "luxury Banquet", img: v5 },
-      { name: "Resort Banquet", img: v6 },
-      { name: "Royal hall", img: v7 },
-      { name: "Grand Banquet", img: v8 }
-    ],
+Shivamogga: [
+  { name: "Green Valley", img: v5 },
+  { name: "Forest Resort", img: v6 },
+  { name: "River Hall", img: v7 },
+  { name: "Nature Palace", img: v8 }
+],
   };
 
-  const [selectedCity, setSelectedCity] = useState("Bangalore");
+  /* 🔥 NO DEFAULT CITY */
+  const [selectedCity, setSelectedCity] = useState("");
 
   return (
     <div className="venue-page">
 
-       {/* TITLE */}
       <div className="venue-title">
         <h2>Venues</h2>
       </div>
 
-      {/* HERO */}
       <div className="venue-hero">
         <h1>FIND YOUR DREAM WEDDING VENUE</h1>
         <p>Explore the finest wedding venue tailored to your desires</p>
       </div>
 
-   
-      {/* LOCATION BUTTONS */}
+      {/* CITY BUTTONS */}
       <div className="venue-locations">
         {Object.keys(venuesData).map((city) => (
           <button
@@ -88,21 +77,21 @@ const Venue = () => {
         ))}
       </div>
 
-      {/* VENUE GRID */}
+      {/* GRID */}
       <div className="venue-grid">
-        {venuesData[selectedCity].map((venue, index) => (
-          
-          /* 🔥 CLICKABLE CARD */
-          <Link 
-            to={`/venue/${venue.name}`} 
-            className="venue-card" 
-            key={index}
-          >
-            <img src={venue.img} alt={venue.name} />
-            <h3>{venue.name}</h3>
-          </Link>
 
+        {/* show nothing until click */}
+        {selectedCity && venuesData[selectedCity].map((venue, index) => (
+          <Link  to={`/venue/${selectedCity}/${venue.name}`}
+              className="venue-card" key={index}>
+            <img src={venue.img} alt={venue.name} />
+
+            <div className="venue-overlay">
+              <h3>{venue.name}</h3>
+            </div>
+          </Link>
         ))}
+
       </div>
 
     </div>

@@ -8,7 +8,7 @@ import Booking from "./components/Booking-page/book";
 import Portfolio from "./components/Portfolio-page/portfolio";
 import Timeline from "./components/TimeLine-page/timeline";
 import Venues from "./components/Venue-page/venue";
-import VenueDetail from "./components/Venue-page/VenueDetail";
+import VenueDetails from "./components/Venue-page/VenueDetail";
 import OurWorks from "./components/OurWork-page/ourwork";
 import ChatBot from "./components/Chat-Bot/chatbot";
 
@@ -27,11 +27,11 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/venues" element={<Venues />} />
-        <Route path="/venue/:name" element={<VenueDetail />} />
+        <Route path="/venue/:city/:name" element={<VenueDetails />} />
         <Route path="/our-works" element={<OurWorks />} />
       </Routes>
     </>
   )
 }
 
-export default App
+export default App;
