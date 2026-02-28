@@ -306,19 +306,7 @@
     margin-bottom: 0.8rem;
 }
 
-.crown-badge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #ff8c00;
-    color: #fff;
-    padding: 6px 6px 10px;
-    font-size: 0.9rem;
-    z-index: 2;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
-    width: 24px;
-    text-align: center;
-}
+
 
 .image-wrapper img {
     width: 100%;
