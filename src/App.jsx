@@ -9,7 +9,6 @@ import Portfolio from "./components/Portfolio-page/portfolio";
 import Timeline from "./components/TimeLine-page/timeline";
 import Venues from "./components/Venue-page/venue";
 import VenueDetails from "./components/Venue-page/VenueDetail";
-import OurWorks from "./components/OurWork-page/ourwork";
 import ChatBot from "./components/Chat-Bot/chatbot";
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/venues" element={<Venues />} />
         <Route path="/venue/:city/:name" element={<VenueDetails />} />
-        <Route path="/our-works" element={<OurWorks />} />
       </Routes>
     </>
   )
