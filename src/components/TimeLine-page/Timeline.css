@@ -1,262 +1,236 @@
-/* ===== Timeline Container ===== */
+/* ============================= */
+/*        TIMELINE PAGE          */
+/* ============================= */
 
 .timeline-container {
+  padding: 80px 20px;
   background: #f9f6f2;
-  padding: 60px 20px;
   font-family: "Segoe UI", sans-serif;
 }
 
 .timeline-container h2 {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 50px;
+  font-size: 36px;
+  margin-bottom: 60px;
   color: #5a3e2b;
+  letter-spacing: 1px;
 }
 
-/* ===== Timeline ===== */
+/* ============================= */
+/*         MAIN TIMELINE         */
+/* ============================= */
 
 .timeline {
   position: relative;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 20px 0;
 }
 
 /* Center Line */
-
 .line {
   position: absolute;
+  left: 50%;
   width: 4px;
-  background: #c89b3c;
+  background: linear-gradient(to bottom, #c9974d, #b8863b);
   top: 0;
   bottom: 0;
-  left: 50%;
   transform: translateX(-50%);
+  border-radius: 10px;
 }
 
-/* Timeline Item */
+/* ============================= */
+/*        TIMELINE ITEMS         */
+/* ============================= */
 
 .timeline-item {
-  width: 50%;
   padding: 20px 40px;
   position: relative;
+  width: 50%;
   box-sizing: border-box;
 }
 
+/* Left Side */
 .timeline-item.left {
   left: 0;
   text-align: right;
 }
 
+/* Right Side */
 .timeline-item.right {
   left: 50%;
 }
 
-/* Timeline Dot */
-
+/* Gold Circle Dot */
 .timeline-item::after {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
-  background: #c89b3c;
+  width: 18px;
+  height: 18px;
+  background: #c9974d;
+  border: 3px solid #fff;
+  top: 35px;
   border-radius: 50%;
-  top: 30px;
   z-index: 1;
 }
 
 .timeline-item.left::after {
-  right: -8px;
+  right: -9px;
 }
 
 .timeline-item.right::after {
-  left: -8px;
+  left: -9px;
 }
 
-/* Content Box */
+/* ============================= */
+/*          EVENT CARD           */
+/* ============================= */
 
 .content {
-  background: white;
-  padding: 20px;
+  background: #ffffff;
+  padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* Event Header */
+/* ============================= */
+/*        EVENT HEADER           */
+/* ============================= */
 
 .event-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-.timeline-item.left .event-header {
-  justify-content: flex-end;
-}
-
-.event-header img {
-  width: 40px;
-  height: 40px;
-}
-
-.click-text {
-  color: #c89b3c;
-  font-weight: 500;
-  margin-top: 8px;
-}
-
-/* ===== Booking Section ===== */
-
-.booking-box {
-  margin: 60px auto 0;
-  max-width: 420px;
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.booking-box h3 {
-  text-align: center;
-  margin-bottom: 20px;
+.event-header h3 {
+  font-size: 20px;
   color: #5a3e2b;
+  margin: 0;
 }
 
-.booking-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.event-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
-.booking-box input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+/* ============================= */
+/*        STATUS BADGE           */
+/* ============================= */
+
+.status.confirmed {
+  background: #d4edda;
+  color: #2e7d32;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* ============================= */
+/*        EVENT DETAILS TEXT     */
+/* ============================= */
+
+.content p {
+  margin: 6px 0;
+  color: #444;
   font-size: 14px;
 }
 
-.booking-box button {
-  padding: 10px;
+/* ============================= */
+/*         VIEW BUTTON           */
+/* ============================= */
+
+.view-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #c9974d, #b8863b);
+  border: none;
   border-radius: 8px;
-  border: none;
-  background: #c89b3c;
-  color: white;
-  font-weight: 500;
+  color: #ffffff;
   cursor: pointer;
-  transition: 0.2s;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.booking-box button:hover {
-  opacity: 0.9;
+.view-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(200, 150, 70, 0.3);
 }
 
-.cancel {
-  background: #ccc !important;
-  color: black !important;
+/* ============================= */
+/*      EXPANDED SCHEDULE        */
+/* ============================= */
+
+.event-details {
+  margin-top: 15px;
+  background: #f3ede6;
+  padding: 15px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* ===== Calendar Section ===== */
-
-.calendar-section {
-  margin-top: 80px;
-  text-align: center;
-}
-
-.calendar-section h3 {
-  margin-bottom: 25px;
-  color: #5a3e2b;
-}
-
-.calendar {
-  background: white;
-  display: inline-block;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Calendar Header */
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.calendar-header button {
-  background: #c89b3c;
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.calendar-header h4 {
+.event-details ul {
+  padding-left: 18px;
   margin: 0;
-  font-size: 18px;
 }
 
-/* Calendar Grid */
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
-  width: 350px;
-}
-
-.day-name {
-  font-weight: bold;
+.event-details li {
+  margin-bottom: 8px;
+  font-size: 14px;
   color: #5a3e2b;
 }
 
-.day {
-  padding: 10px;
-  border-radius: 8px;
-  background: #f3eee7;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.day:hover {
-  background: #e6d9c6;
-}
-
-/* Highlight Booked Dates */
-
-.booked {
-  background: #c89b3c;
-  color: white;
-  font-weight: bold;
-}
-
-/* ===== Responsive ===== */
-
-@media (max-width: 768px) {
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    text-align: left;
-    padding-left: 60px;
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/*        RESPONSIVE DESIGN      */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
 
   .line {
-    left: 20px;
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
   }
 
   .timeline-item::after {
-    left: 12px !important;
+    left: 0;
   }
 
-  .calendar-grid {
-    width: 100%;
+  .timeline-item.left::after,
+  .timeline-item.right::after {
+    left: -2px;
   }
 }
