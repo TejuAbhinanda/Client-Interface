@@ -215,9 +215,6 @@ const VenueDetails = () => {
             Specific Area, {city}, India
           </div>
         </div>
-
-
-
       </div>
 
       {/* PORTFOLIO TABS */}

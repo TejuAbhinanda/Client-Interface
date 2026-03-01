@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
 import './venue.css';
 
 const VenuesPage = () => {
     const [selectedLocation, setSelectedLocation] = useState('Bangalore');
-    const [viewMode, setViewMode] = useState('list'); // Default to list or grid based on preference
     const [searchQuery, setSearchQuery] = useState('');
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const searchRef = useRef(null);
@@ -23,13 +21,6 @@ const VenuesPage = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-
-    const locations = [
-        'Bangalore',
-        'Goa',
-        'Mangalore',
-        'Shivamogga'
-    ];
 
     const venuesData = [
         {
@@ -211,16 +202,6 @@ const VenuesPage = () => {
 
         },
 
-    ];
-
-    const navItems = [
-        'Logo',
-        'Portfolio',
-        'Booking',
-        'Timeline',
-        'Venues',
-        'Decor',
-        'Our Works'
     ];
 
     const filteredVenues = venuesData.filter(venue => {
