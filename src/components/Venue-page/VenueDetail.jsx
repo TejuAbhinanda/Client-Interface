@@ -224,8 +224,7 @@ const VenueDetails = () => {
       <div className="vd-portfolio-container">
         <div className="vd-portfolio-tabs">
           <div className={`vd-ptab ${activeTab === 'portfolio' ? 'active' : ''}`} onClick={() => setActiveTab('portfolio')}>PORTFOLIO (19)</div>
-          <div className={`vd-ptab ${activeTab === 'albums' ? 'active' : ''}`} onClick={() => setActiveTab('albums')}>ALBUMS (2)</div>
-          <div className={`vd-ptab ${activeTab === 'videos' ? 'active' : ''}`} onClick={() => setActiveTab('videos')}>VIDEOS (0)</div>
+
         </div>
 
         {/* GALLERY */}
